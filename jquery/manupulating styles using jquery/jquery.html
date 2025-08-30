@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manupulating Styles using Jquery</title>
+    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #circle{
+            width:200px ;
+            height: 200px;
+            background-color: green;
+            border-radius: 50%;
+        }
+        .square{  
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-top: 10px;
+        }
+        #square2{
+            border-radius: 35%;
+        }
+
+          
+       
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <div class="square" ></div>
+    <div class="square" id="square2" ></div>
+    <script>
+        if(jQuery == "undefined"){
+            alert("jquery not included");
+        }
+        else{
+            alert("jquery included");
+        };
+
+        $("#circle").click(function(){
+            $("#circle").css("background-color","red");
+              $("#circle").css("width","400px");
+              alert("The circle is clicked");
+        });
+
+        // $("#square1").click(function(){
+        // $("#square1").css("display","none");
+        // })
+        // $("#square2").click(function(){
+        // $("#square2").css("display","none");
+        // })
+    // if we are using div instead of this keyword then all the three images will disappear but in this the image that we clicked on only that image will be dissapear
+        $("div").click(function(){
+            $(this).css("display","none");
+        })
+    </script>
+</body>
+</html>

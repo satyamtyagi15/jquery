@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Out/FadeIn content in jquery</title>
+    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #para{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p id = "para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Eligendi non voluptatem maxime dolorem! Cum reprehenderit dolor 
+        voluptas ipsum laudantium deserunt modi voluptatibus, error fugiat
+         voluptatem quas quaerat corporis mollitia iste impedit minima labore
+          voluptate. Facilis iure maiores quibusdam saepe atque.</p>
+          <!-- <button>FadeOut Content</button> -->
+           <button>FadeIn Content</button>
+    <script>
+        if(jQuery == "undefined"){
+            alert("jquery not included");
+        }
+        else{
+            alert("jquery included");
+        }
+        // $("button").click(function(){
+        //     $("p").fadeOut("slow")
+        // })
+
+        // right now we can see as we are clicking on the fadeout button  the whole paragraph is been dissapeared in order to make it that way such that we click on a particular word and that word should dissapear from the whole paragraph and also be displayed on the screen which word is dissapear from the screen 
+        // so in jquery we execute this with the help of the callback function 
+        // now what's a callback function?   it's like that suppose we are executing a certain task once that task is been executed we can go back to that particular function and execute that function.
+        // they are use to callback a function when the particular task is been completed.
+
+
+        //  $("button").click(function(){
+        //     $("p").fadeOut("slow",function(){
+        //         alert("the content has been faded out .... :)")
+        //     })
+        // });
+
+        // now let's see how to use the fade in button 
+        
+            $("button").click(function(){
+            $("#para").fadeIn("slow",function(){
+                alert("the content is faded in  .... :)")
+            })
+        })
+
+        </script>
+</body>
+</html>

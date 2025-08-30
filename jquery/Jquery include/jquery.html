@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Include</title>
+    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #circle{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+             border-radius: 50%; 
+        }
+        .square{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+     <div id="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <script>
+        if(jQuery == "undefined"){
+            alert("jquery not included");
+        }
+        else{
+            alert("jquery included");
+        }
+       
+        $("#circle").click(function(){
+            alert("circle is clicked ");
+        });
+        // $("#circle").hover(function(){
+        //     alert("do you want to click on the circle ?");
+        // })
+        $(".square").click(function(){
+            alert("square is clicked ");
+        });
+        // or we can also show an alert for clicking any element in the div 
+        // $("div").click(function(){
+        //     alert("div is clicked :)");
+        // })
+    </script>
+
+
+   
+</body>
+</html>

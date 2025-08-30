@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Jquery UI Plugins</title>
+    <script src="jquery-ui-1.14.1/jquery-ui.js"></script>
+        <link href="jquery-ui-1.14.1/jquery-ui.css">
+    <style>
+        #small{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 50px;
+        }
+        #large{
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="small"></div>
+    <div id="large"></div>
+    <div id="drag">
+        <p>This is draggable</p>
+    </div>
+    <script>
+         if(jQuery == "undefined"){
+            alert("jquery not included");
+        }
+        else{
+            alert("jquery included");
+        }
+    //    $("#drag").draggable(); // in order to drag the element both side horizontally and vertically both at the same time .
+      $("#drag").draggable({axis : "x"});// in order to drag the content horizontally 
+      //  $("#drag").draggable({axis : "y"}); // in order to drag the content vertically 
+
+
+      // now suppose we have 2 squares one small of red color and one large of blue color and i need to drag the smallest one on top of the larger one 
+      $("#small").draggable();
+       $( "#large" ).droppable({
+      drop: function( event, ui ) {
+       alert("element dropped")
+    }
+  } );
+    </script>
+</body>
+</html>

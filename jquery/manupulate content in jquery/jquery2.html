@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manupulating in Jquery</title>
+    <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- now let's manupulate different attributes with the help of jquery  -->
+     <!-- let's say i need to include the jquery webpage on my webpage for that we're going to use the iframe tag and provide the link of jquery website  -->
+      <iframe src="https://www.youtube.com/" frameborder="0"></iframe>
+      <!-- now what i want is whenever the user hover over this youtube website block it should change to instagram.com -->
+
+    <script>
+        if(jQuery == "undefined"){
+            alert("jquery not included");
+        }
+        else{
+            alert("jquery included");
+        }
+        $("iframe").hover(function(){
+            $("iframe").attr("src","https://www.instagram.com/");
+        })
+    </script>
+</body>
+</html>

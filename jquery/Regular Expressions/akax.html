@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions in js </title>
+</head>
+<body>
+    <script>
+        // var str ="This is regular expression";
+        // var regex = /regulary/;
+        // var result = str.match(regex);
+        // alert(result);
+
+
+
+        // so here we can see this match returns regular as it's present inside my string str but it'll return null if it's not present inside the string.
+        // here we can also see that it's returning null if we are putting R capital one so in order to avoid this case sensitivity during matching we need 
+        // to use the i after the /
+
+
+        // var str ="This is regular expression";
+        // var regex = /Regular/i;
+        // var result = str.match(regex);
+        // alert(result);
+
+        // now let's say one word is repeated more then 1 time and we need to know it's occurence how many times the word is repeated so for that we need to use 
+        // the global variable g after the /
+        
+        var str ="This is regular regular regular regular expression";
+        var regex = /regular/g;
+        var result = str.match(regex);
+        alert(result);
+    </script>
+</body>
+</html>

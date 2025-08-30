@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <script src="jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Jquery Widgets</title>
+    <script src="jquery-ui-1.14.1/jquery-ui.js"></script>
+        <link href="jquery-ui-1.14.1/jquery-ui.css">
+</head>
+<body>
+    <input type="text" id="textinp">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="accordion">
+        <h3>section-1</h3>
+        <div>
+            <p>
+                Satyam Tyagi is the best of all he's the greatest of all 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Do
+                loribus dolore repudiandae excepturi vel error, velit aliquam
+                 modi commodi amet quam fugiat. Aspernatur reiciendis asperiores
+                  sapiente, perferendis excepturi nulla maxime laborum tempore exe
+                  rcitationem dolorem ullam impedit, beatae optio dignissimos in aut?
+                   Expedita ut deserunt qui omnis doloremque incidunt aut tenetur sint.
+            </p>
+        </div>
+
+          <h3>section-2</h3>
+        <div>
+            <p>
+                Satyam Tyagi is the best of all he's the greatest of all 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Do
+                loribus dolore repudiandae excepturi vel error, velit aliquam
+                 modi commodi amet quam fugiat. Aspernatur reiciendis asperiores
+                  sapiente, perferendis excepturi nulla maxime laborum tempore exe
+                  rcitationem dolorem ullam impedit, beatae optio dignissimos in aut?
+                   Expedita ut deserunt qui omnis doloremque incidunt aut tenetur sint.
+            </p>
+        </div>
+    </div>
+    <script>
+         if(jQuery == "undefined"){
+            alert("jquery not included");
+        }
+        else{
+            alert("jquery included");
+        }
+    
+        $("#accordion").accordion();
+        $("#textinp").datepicker();
+    </script>
+</body>
+</html>
